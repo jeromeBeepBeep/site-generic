@@ -1,14 +1,52 @@
-.responsiveNavbar{
+.responsiveNavbar, .logo_brand_container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--accent-color);
+    column-gap: 1vw;
+}
+
+.responsiveNavbar{
+    background-color: var(--bg-navBar);
+    justify-content: space-between;
+    padding-right: 2vw;
+    padding-left: 1vw;
 }
 
 .navbar_logo{
-    max-height: 10vh;
+    height: 10vh;
 }
 
-menu{
-    display: inline;
+.navbar-brand{
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar_Title{
+    font-size: 5vh;
+    font-weight: bold;
+}
+#navbar_subTitle{
+    font-size: 3vh;
+    font-weight: normal;
+    padding-left: 1vw;
+}
+
+.nav-link-cont{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5vw;
+}
+
+#navbar_Title,#navbar_subTitle,.nav-link,.nav-link-active{
+    text-decoration: none;
+    outline: none;
+}
+
+.nav-link-active,.nav-link{
+    font-size: 3vh;
+    color: var(--text-color-nav-link);
+}
+
+.nav-link-active{
+    font-weight: bold;
 }
