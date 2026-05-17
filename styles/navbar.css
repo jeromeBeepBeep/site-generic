@@ -13,7 +13,7 @@
 }
 
 .navbar_logo{
-    height: 10vh;
+    height: 8vh;
 }
 
 .navbar-brand{
@@ -24,11 +24,13 @@
 #navbar_Title{
     font-size: 5vh;
     font-weight: bold;
+    color: var(--text-color-nav-Title);
 }
 #navbar_subTitle{
     font-size: 3vh;
     font-weight: normal;
     padding-left: 1vw;
+    color: var(--text-color-nav-subTitle);
 }
 
 .nav-link-cont{
