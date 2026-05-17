@@ -1,3 +1,14 @@
 .responsiveNavbar{
-background-color: var(--accent-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--accent-color);
+}
+
+.navbar_logo{
+    max-height: 10vh;
+}
+
+menu{
+    display: inline;
 }
