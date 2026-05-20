@@ -1,10 +1,10 @@
 :root {
   /* Thème par défaut*/
-  --bg-primary: #a49e9e;
-  --bg-navBar: #9179f3;
-  --text-color-nav-link : #272d2b;
-  --text-color-nav-Title : #fe540b;
-  --text-color-nav-subTitle : #026343;
-  --text-primary: #333333;
-  --accent-color: #3498db;
+  --color-light:#efefef;
+  --color-mid-light:#b2b2b2;
+  --color-medium:#8d8c8c;
+  --color-mid-dark:#686868;
+  --color-dark:#383838;
+  --font-title:Roboto; /*load in head of file*/
+  --font-body:Nunito; /*load in head of file*/
 }

@@ -1,0 +1,16 @@
+.Hero{
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 5vh;
+}
+
+#Hero-title{
+    font-weight: bold;
+    font-family: var(--font-title);
+
+}
+
+#Hero-body{
+    padding-bottom: 5vh;
+     font-family: var(--font-body);
+}
