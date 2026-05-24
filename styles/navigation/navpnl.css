@@ -1,0 +1,52 @@
+
+
+/* Le panneau de navigation (la porte) */
+.nav-panel {
+    position: fixed;
+    top:7.5vh;
+    right:0;
+    z-index: 9999;
+    background-color: #2f3542;
+    max-height: 0; /* Caché par défaut en hauteur */
+    overflow: hidden;
+    
+    /* Configuration pour l'effet 3D */
+    transform-origin: right; /* La "charnière" de la porte est en haut */
+    transform: rotateY(-90deg); /* La porte est levée à l'horizontale (invisible) */
+    opacity: 0;
+    
+    /* Transition fluide */
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease, max-height 0.5s ease;
+}
+
+/* Les liens à l'intérieur */
+/* État initial de chaque item : invisible et décalé de 20px vers la gauche */
+.nav-links li {
+    margin: 15px 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    /* On anime l'opacité et le mouvement */
+    transition: transform 0.4s ease, opacity 0.4s ease; 
+}
+
+/* État final quand le panneau est ouvert : ils reprennent leur place */
+.nav-panel.is-open .nav-links li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- LES DÉLAIS (La cascade) --- */
+/* Dès que la porte commence à s'ouvrir, les éléments arrivent les uns après les autres */
+.nav-panel.is-open .nav-links li:nth-child(1) { transition-delay: 0.2s; }
+.nav-panel.is-open .nav-links li:nth-child(2) { transition-delay: 0.3s; }
+.nav-panel.is-open .nav-links li:nth-child(3) { transition-delay: 0.4s; }
+.nav-panel.is-open .nav-links li:nth-child(4) { transition-delay: 0.5s; }
+
+
+
+/* --- L'ÉTAT ACTIF (Quand la porte s'ouvre) --- */
+.nav-panel.is-open {
+  max-height: 100%; /* Une hauteur max suffisante pour vos liens */
+  transform: rotateX(0deg); /* La porte retombe à sa position verticale */
+  opacity: 1;
+}

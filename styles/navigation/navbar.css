@@ -6,6 +6,10 @@
 }
 
 .responsiveNavbar{
+    position: sticky;
+    top:0;
+    height : 7.5vh;
+    width: 100%;
     background-color: var(--color-light);
     justify-content: space-between;
     padding-right: 2vw;
@@ -25,6 +29,7 @@
 .navbar-brand{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 #navbar_Title{
