@@ -18,3 +18,32 @@ html, body {
 }
 
 
+
+/* Conteneur pour centrer et espacer le séparateur */
+.separator-container {
+    width: 100%;
+    max-width: 50%; /* Tu peux ajuster la largeur maximale ici */
+    margin: 40px auto; /* Centre le bloc et ajoute de l'espace dessus/dessous */
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+/* La pilule fine */
+.elastic-separator {
+    width: 0%; /* Commence invisible (largeur à 0) */
+    height: 5px; /* Épaisseur fine de la pilule */
+    background: linear-gradient(90deg, var(--color-dark), var(--color-mid-dark)); /* Dégradé moderne, change les couleurs ici */
+    border-radius: 9999px; /* Donne la forme de pilule parfaite */
+    opacity: 0;
+    
+    /* Transition avec un effet "élastique" (rebond à la fin) */
+    transition: width 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease;
+}
+
+/* Classe injectée par le JS quand on scroll dessus */
+.elastic-separator.is-visible {
+    width: 100%;
+    opacity: 1;
+}
