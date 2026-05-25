@@ -5,6 +5,8 @@
   --color-medium:#8d8c8c;
   --color-mid-dark:#686868;
   --color-dark:#383838;
+  --color-complementary:#d0d3e1;
   --font-title:Roboto; /*load in head of file*/
   --font-body:Nunito; /*load in head of file*/
+
 }

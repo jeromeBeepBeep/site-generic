@@ -2,36 +2,48 @@
 
 /* Le panneau de navigation (la porte) */
 .nav-panel {
-    position: fixed;
-    top:7.5vh;
-    right:0;
-    z-index: 9999;
-    background-color: #2f3542;
-    max-height: 0; /* Caché par défaut en hauteur */
-    overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+  position: fixed;
+  top:7.5vh;
+  right:0;
+  z-index: 9999;
+  width:100%;
+  background-color: var(--color-complementary);
+  max-height: 0; /* Caché par défaut en hauteur */
+  overflow: hidden;
     
-    /* Configuration pour l'effet 3D */
-    transform-origin: right; /* La "charnière" de la porte est en haut */
-    transform: rotateY(-90deg); /* La porte est levée à l'horizontale (invisible) */
-    opacity: 0;
+  /* Configuration pour l'effet 3D */
+  transform-origin: right; /* La "charnière" de la porte est en haut */
+  transform: rotateY(-90deg); /* La porte est levée à l'horizontale (invisible) */
+  opacity: 0;
     
-    /* Transition fluide */
-    transition: transform 0.5s ease-in-out, opacity 0.4s ease, max-height 0.5s ease;
+  /* Transition fluide */
+  transition: transform 0.5s ease-in-out, opacity 0.4s ease, max-height 0.5s ease;
 }
 
 /* Les liens à l'intérieur */
 /* État initial de chaque item : invisible et décalé de 20px vers la gauche */
 .nav-links li {
-    margin: 15px 0;
-    opacity: 0;
-    transform: translateX(-20px);
-    /* On anime l'opacité et le mouvement */
-    transition: transform 0.4s ease, opacity 0.4s ease; 
+  list-style-type: none;
+  margin: 15px 0;
+  opacity: 0;
+  transform: translateX(-20px);
+  /* On anime l'opacité et le mouvement */
+  transition: transform 0.4s ease, opacity 0.4s ease; 
 }
+
+.nav-links {
+  padding-inline-start: 0;
+  height:100vh;
+}
+
 
 /* État final quand le panneau est ouvert : ils reprennent leur place */
 .nav-panel.is-open .nav-links li {
   opacity: 1;
+  max-width: 100%;
   transform: translateX(0);
 }
 
