@@ -73,3 +73,36 @@
     background-color: var(--color-dark);
     font-weight: bold;
 }
+
+.nav-btn-cont {
+  position: relative;
+  padding: 1.5rem;
+}
+
+
+@media (max-width: 800px) {
+    .nav-link-cont{
+    visibility:hidden;
+        width: 0px;
+    }
+
+    .nav-link-cont .nav-link-active,nav-link-cont .nav-link{
+    min-width: 0px;
+    width: 0px;
+    }
+
+    .nav-btn-cont {
+    visibility:visible;
+    }
+}
+
+@media (min-width: 800px) {
+    .nav-btn-cont {
+    visibility:hidden;
+    }
+
+    .nav-link-cont{
+    visibility:visible;
+    }
+
+}
