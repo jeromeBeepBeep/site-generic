@@ -13,21 +13,29 @@
       
         
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
+            <link rel="apple-touch-icon" sizes="180x180" href="ressources/images/favicon/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="ressources/images/favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="ressources/images/favicon/favicon-16x16.png">
+            <link rel="manifest" href="ressources/images/favicon/site.webmanifest">
         
-        <!-- style -->
+        <!-- style -->  
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
             <link rel="stylesheet" href="styles/themes.css">
-            <link rel="stylesheet" href="styles/navbar.css">
-            <link rel="stylesheet" href="styles/page1.css">
-                        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+            <link rel="stylesheet" href="styles/navigation/navpnl.css">
+            <link rel="stylesheet" href="styles/navigation/navbtn.css">
+            <link rel="stylesheet" href="styles/navigation/navbar.css">
+
+            <link rel="stylesheet" href="styles/index.css">
+
+
+
     </head>
 
 
     <body>
 
+        <!--Barre de naviagation-->
         <nav class="responsiveNavbar">
             
             <div class="logo_brand_container">
@@ -37,19 +45,45 @@
                 
 
                 <div class="navbar-brand" href="index.html" id="nav-title">
-                    <a id="navbar_Title">nav title</a>
-                    <a id="navbar_subTitle">nav sub title</a> 
+                    <div id="navbar_Title">nav title</div>
+                    <div id="navbar_subTitle">nav sub title</div> 
                 </div>
             </div>
 
             <div class="nav-link-cont">
-                <a class="nav-link" href="index.html">Acceuil</a>
-                <a class="nav-link-active" href="page1.html">Page 1</a>
+                <a class="nav-link-active" href="index.html">Acceuil</a>
+                <a class="nav-link" href="page1.html">Page 1</a>
                 <a class="nav-link" href="page2.html">Page 2</a>
                 <a class="nav-link" href="page3.html">Page 3</a>
             </div>
+
+
+            <div class="nav-btn-cont">
+                <a id="menu-toggle" class="menu-toggle">
+                    <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
+                </a>
+            </div>
+
             
         </nav>
+
+        <!--Panneau de navigation-->
+        <div id="nav-panel" class="nav-panel">
+            <ul class="nav-links">
+                <li><a class="nav-link-active" href="index.html">Acceuil</a></li>
+                <li><a class="nav-link" href="page1.html">Page 1</a></li>
+                <li><a class="nav-link" href="page2.html">Page 2</a></li>
+                <li><a class="nav-link" href="page3.html">Page 3</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <!-- Script -->
+        <script src="scripts/navbtn.js"></script>
 
     </body>
 
