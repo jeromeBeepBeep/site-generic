@@ -6,8 +6,10 @@
 }
 
 .responsiveNavbar{
-    position: sticky;
+    position: fixed;
+    z-index: 9999;
     top:0;
+    align-self: flex-start;
     height : 7.5vh;
     width: 100%;
     background-color: var(--color-light);
