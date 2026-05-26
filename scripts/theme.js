@@ -1,28 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. On cible l'élément à animer
-    const elasticSeparator = document.querySelector('.elastic-separator');
+    // On cible TOUS les séparateurs au cas où tu en aurais plusieurs sur la page
+    const elasticSeparators = document.querySelectorAll('.elastic-separator');
     
-    // Si l'élément n'existe pas sur la page, on arrête le script pour éviter les erreurs
-    if (!elasticSeparator) return;
+    if (elasticSeparators.length === 0) return;
 
-    // 2. Configuration de l'Observer
     const observerOptions = {
-        root: null, // Utilise la fenêtre du navigateur (viewport)
-        threshold: 0.3 // Se déclenche dès que 30% du séparateur est visible à l'écran
+        root: null, 
+        threshold: 0.3 // Se déclenche quand 30% du séparateur est visible
     };
 
-    // 3. Création de l'Observer
-    const separatorObserver = new IntersectionObserver((entries, observer) => {
+    const separatorObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // Si le séparateur entre dans l'écran
             if (entry.isIntersecting) {
+                // Le séparateur est visible -> on joue l'animation
                 entry.target.classList.add('is-visible');
-                // On coupe l'observation pour que l'animation ne se joue qu'une seule fois
-                observer.unobserve(entry.target);
+            } else {
+                // Le séparateur sort de l'écran -> on réinitialise l'état pour la prochaine fois
+                entry.target.classList.remove('is-visible');
             }
         });
     }, observerOptions);
 
-    // 4. On lance l'écoute sur notre séparateur
-    separatorObserver.observe(elasticSeparator);
+    // On lance l'écoute sur chaque séparateur trouvé
+    elasticSeparators.forEach(separator => separatorObserver.observe(separator));
 });

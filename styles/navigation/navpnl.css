@@ -11,7 +11,7 @@
   background-color: var(--color-complementary);
   max-height: 0; /* Caché par défaut en hauteur */
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   /* Configuration pour l'effet 3D */
   transform-origin: right; /* La "charnière" de la porte est en haut */
   transform: rotateY(-90deg); /* La porte est levée à l'horizontale (invisible) */
@@ -29,6 +29,13 @@
   transform: translateX(-20px);
   /* On anime l'opacité et le mouvement */
   transition: transform 0.4s ease, opacity 0.4s ease; 
+
+}
+
+.nav-panel .nav-links .nav-link, .nav-panel .nav-links .nav-link-active{
+  font-size: 3vh;
+  max-width: 100vw;
+  width: 50vw;
 }
 
 .nav-links {
@@ -36,6 +43,7 @@
   margin: 5%;
   height:100vh;
 }
+
 
 
 /* État final quand le panneau est ouvert : ils reprennent leur place */
@@ -54,7 +62,6 @@
 
 
 
-/* --- L'ÉTAT ACTIF (Quand la porte s'ouvre) --- */
 .nav-panel.is-open {
   max-height: 100%; /* Une hauteur max suffisante pour vos liens */
   transform: rotateX(0deg); /* La porte retombe à sa position verticale */
