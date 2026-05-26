@@ -1,153 +1,149 @@
 
-
-.timeline{
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-
-}
-
-@media (max-width: 800px) {
-    .timeline{
-        flex-direction: column;
-        align-items: center;
-        max-height: none;
-        height: max-content;
-    }
-}
-
-.timeline .outer{
-max-height: 50vh;
-overflow-y: scroll;
-}
-
-@media (max-width: 800px) {
-    .timeline .outer{
-        max-height: none;
-        overflow-y: auto;
-    }
-}
-
-
-
-
-#timeline-title{
-    font-weight: bold;
-    font-family: var(--font-title);
-    text-align: center;
-    font-size: 5vh;
-}
-
-#timeline-img{
-    width:33%;
-}
-
-.timeline-img-cont{
+/* --- STRUCTURE GLOBALE (Grand Écran) --- */
+.timeline {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Aligne l'en-tête à gauche et les cartes à droite */
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Bloc Titre + Photo */
+.timeline-img-cont {
+    flex: 1;
+    position: sticky; /* Reste visible pendant le scroll des cartes */
+    top: 2rem;
+    text-align: center;
+    height: max-content;
+}
+
+#timeline-title {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+#timeline-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-medium);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Bloc qui contient toutes les cartes */
+.outer {
+    flex: 2;
+    position: relative;
+    padding-left: 2rem; /* Espace pour la ligne */
+}
+
+/* La ligne verticale de la timeline */
+.outer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-light);
+}
+
+/* --- LES CARTES --- */
+.card {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.info {
+    background: var(--color-light);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-medium);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.info .title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.info p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Les puces (points) sur la ligne */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    width: 10px;
+    height: 10px;
+    background: var(--color-medium);
+    border: 4px solid var(--color-light); 
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Sur grand écran (Desktop) */
+.card::after {
+    left: calc(-2rem - 9px); 
+    /* -2rem correspond au padding-left de .outer */
+    /* -9px prend en compte la moitié de la largeur totale du point (largeur 10px + 2x4px de bordure = 18px / 2 = 9px) */
 }
 
 
+/* --- MOBILE & TABLETTE (Moins de 800px) --- */
+@media (max-width: 800px) {
+    .timeline {
+        flex-direction: column; /* Tout s'empile verticalement */
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
 
-/* Card container */
-.timeline .card {
-  position: relative;
-  max-width: 90%;
-}
+    .timeline-img-cont {
+        position: static; /* Désactive le sticky sur mobile */
+        margin-bottom: 1rem;
+    }
 
+    #timeline-title {
+        font-size: 2rem;
+    }
 
-/* setting padding based on even or odd */
-.timeline .card:nth-child(odd) {
-  padding: 30px 0 30px 30px;
-}
-.timeline .card:nth-child(even) {
-  padding: 30px 30px 30px 0;
-}
-/* Global ::before */
-.timeline .card::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  border: solid var(--color-medium);
-}
+    #timeline-img {
+        width: 90px;
+        height: 90px;
+    }
 
-/* Setting the border of top, bottom, left */
-.timeline .card:nth-child(odd)::before {
-  left: 5px;
-  top: -4.5px;
-  bottom: -4.5px;
-  border-width: 5px 0 5px 5px;
-  border-radius: 50px 0 0 50px;
-}
+    .outer {
+        padding-left: 1.5rem; /* On réduit un peu l'espace sur petit écran */
+    }
 
 
-/* Setting the border of top, bottom, right */
-.timeline .card:nth-child(even)::before {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-width: 5px 5px 5px 0;
-  border-radius: 0 50px 50px 0;
-}
 
-/* Removing the border if it is the first card */
-.timeline .card:first-child::before {
-  border-top: 0;
-  border-top-left-radius: 0;
-}
+    .card::after {
+        left: calc(-1.5rem - 9px) !important; 
+        /* On ajuste simplement par rapport au nouveau padding de -1.5rem */
+    }
 
-/* Removing the border if it is the last card  and it's odd */
-.timeline .card:last-child:nth-child(odd)::before {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-}
-
-/* Removing the border if it is the last card  and it's even */
-.timeline .card:last-child:nth-child(even)::before {
-  border-bottom: 0;
-  border-bottom-right-radius: 0;
-}
-
-/* Information about the timeline */
-.timeline .info {
-  display: flex;
-  flex-direction: column;
-  background: var(--color-light);
-  color: var(--color-dark);
-  border-radius: 10px;
-  padding: 10px;
-  margin:10px;
-}
-
-/* Title of the card */
-.timeline .title {
-  color: var(--color-medium);
-  position: relative;
-}
-
-/* Timeline dot  */
-.timeline .title::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 999px;
-  border: 3px solid var(--color-medium);
-}
-
-/* text right if the card is even  */
-.timeline .card:nth-child(even) > .info > .title {
-  text-align: right;
-}
-
-/* setting dot to the left if the card is odd */
-.timeline .card:nth-child(odd) > .info > .title::before {
-  left: -50px;
-}
-
-/* setting dot to the right if the card is odd */
-.timeline .card:nth-child(even) > .info > .title::before {
-  right: -55px;
+    
+    .info {
+        padding: 1.25rem; /* Cartes légèrement plus compactes */
+        max-width: 65vw;
+    }
 }
