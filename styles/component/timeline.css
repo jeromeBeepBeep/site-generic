@@ -1,0 +1,17 @@
+
+
+.timeline{
+display: flex;
+
+}
+
+#timeline-title{
+    font-weight: bold;
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 5vh;
+}
+
+#timeline-img{
+    width:33%;
+}

@@ -23,7 +23,7 @@ html, body {
 .separator-container {
     width: 100%;
     max-width: 50%; /* Tu peux ajuster la largeur maximale ici */
-    margin: 40px auto; /* Centre le bloc et ajoute de l'espace dessus/dessous */
+    margin: 7.5vh auto; /* Centre le bloc et ajoute de l'espace dessus/dessous */
     padding: 0 20px;
     box-sizing: border-box;
     display: flex;
