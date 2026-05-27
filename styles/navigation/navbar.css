@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 1vw;
+    column-gap: 16px;
 }
 
 .responsiveNavbar{
@@ -10,7 +10,7 @@
     z-index: 9999;
     top:0;
     align-self: flex-start;
-    height : 7.5vh;
+    height : 56px;
     width: 100%;
     background-color: var(--color-light);
     justify-content: space-between;
@@ -23,7 +23,7 @@
 }
 
 .navbar_logo{
-    height: 6vh;
+    height: 50px;
 }
 
 .navbar-brand{
@@ -34,27 +34,29 @@
 }
 
 #navbar_Title{
-    font-size: 4vh;
+    font-size: 16px;
     font-weight:bolder;
     color: var(--color-dark);
     font-family: var(--font-title);
 }
 #navbar_subTitle{
-    font-size: 2vh;
+    font-size: 16px;
     font-weight: normal;
     padding-left: 1vw;
     color: var(--color-mid-dark);
 }
 
-.nav-link-cont{
-    display: flex;
-    flex-direction: row;
-    column-gap: 2%;
+.nav-link-cont {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2%;
+  align-items: center; 
+  height: 100%;  
 }
 
 
 .nav-link-active,.nav-link{
-    font-size: 2vh;
+    font-size: 16px;
     color: var(--color-dark);
     background-color: #ddd;
     border: none;
@@ -70,7 +72,7 @@
 }
 
 .nav-link-active{
-    font-size: 2vh;
+    font-size: 16px;
     color: var(--color-light);
     background-color: var(--color-dark);
     font-weight: bold;
@@ -78,7 +80,10 @@
 
 .nav-btn-cont {
   position: relative;
-  padding: 1.5rem;
+  padding: 0 20px; 
+  display: flex;
+  align-items: center; 
+  height: 100%;
 }
 
 
