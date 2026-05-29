@@ -38,7 +38,7 @@
 .outer {
     flex: 2;
     position: relative;
-    padding-left: 2rem; /* Espace pour la ligne */
+    padding-left: 18px; /* Espace pour la ligne */
 }
 
 /* La ligne verticale de la timeline */
@@ -102,9 +102,7 @@
 
 /* Sur grand écran (Desktop) */
 .card::after {
-    left: calc(-2rem - 9px); 
-    /* -2rem correspond au padding-left de .outer */
-    /* -9px prend en compte la moitié de la largeur totale du point (largeur 10px + 2x4px de bordure = 18px / 2 = 9px) */
+    left: -26px; 
 }
 
 
@@ -130,18 +128,7 @@
         height: 90px;
     }
 
-    .outer {
-        padding-left: 1.5rem; /* On réduit un peu l'espace sur petit écran */
-    }
 
-
-
-    .card::after {
-        left: calc(-1.5rem - 9px) !important; 
-        /* On ajuste simplement par rapport au nouveau padding de -1.5rem */
-    }
-
-    
     .info {
         padding: 1.25rem; /* Cartes légèrement plus compactes */
         max-width: 65vw;
