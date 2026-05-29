@@ -9,7 +9,6 @@
   width:100%;
   background-color: var(--color-complementary);
   max-height: 0; /* Caché par défaut en hauteur */
-  overflow: hidden;
   /* Configuration pour l'effet 3D */
   transform-origin: right; /* La "charnière" de la porte est en haut */
   transform: rotateY(-90deg); /* La porte est levée à l'horizontale (invisible) */

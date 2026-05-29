@@ -93,7 +93,7 @@
         width: 0px;
     }
 
-    .nav-link-cont .nav-link-active,nav-link-cont .nav-link{
+    .nav-link-cont .nav-link-active, .nav-link-cont .nav-link{
     min-width: 0px;
     width: 0px;
     }
