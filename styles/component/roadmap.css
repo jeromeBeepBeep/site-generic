@@ -22,7 +22,7 @@
 /* --- Conteneur de la Roadmap --- */
 .roadmap-container {
     position: relative;
-    max-width: 100vh;
+    max-width: 100%;
     margin: 10vh auto 0 auto;
 }
 

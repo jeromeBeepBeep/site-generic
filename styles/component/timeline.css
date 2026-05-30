@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: row; /* Aligne l'en-tête à gauche et les cartes à droite */
     gap: 4rem;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem;
     font-family: system-ui, -apple-system, sans-serif;
@@ -131,6 +130,6 @@
 
     .info {
         padding: 1.25rem; /* Cartes légèrement plus compactes */
-        max-width: 65vw;
+        max-width: 65%;
     }
 }
