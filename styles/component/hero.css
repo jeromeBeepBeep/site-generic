@@ -2,6 +2,8 @@
 .Hero .Hero_component{
     text-align: center;
     font-size: 5vh;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #Hero-title{
@@ -11,4 +13,19 @@
 
 #Hero-body{
      font-family: var(--font-body);
+}
+
+
+/*for typecriter animation*/
+.typewriter > * {
+  color: transparent;
+  position: relative;
+}
+
+.typewriter > *::after {
+  content: attr(data-content);
+  color: var(--font-color, black);
+  position: absolute;
+  left: 0;
+  top: 0;
 }

@@ -4,6 +4,7 @@
 .nav-panel {
   display: flex;
   justify-content: flex-end;
+  top:54px;
   position: fixed;
   z-index: 9999;
   width:100%;
@@ -63,4 +64,10 @@
   max-height: 100%; /* Une hauteur max suffisante pour vos liens */
   transform: rotateX(0deg); /* La porte retombe à sa position verticale */
   opacity: 1;
+}
+
+
+body.nav-open {
+  overflow: hidden; /* Empêche le scroll global */
+  overscroll-behavior: none;
 }
