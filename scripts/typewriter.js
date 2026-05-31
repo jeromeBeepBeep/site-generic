@@ -27,7 +27,7 @@ const typeWriter = () => {
     currentLetter ===
     paragraphs[currentParagraph].textContent.length
   )
-    setTimeout(typeWriter, 125);
+    setTimeout(typeWriter, 150);
   else setTimeout(typeWriter, 10);
 };
 
