@@ -10,7 +10,7 @@
     /* --- COUCHE INFÉRIEURE : Votre image de fond --- */
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), 
-        url('../../ressources/images/door.jpg');
+        url('../../ressources/images/door.jpg');/*Image by <a href="https://pixabay.com/users/cdd20-1193381/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5173413">Hello Cdd20</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5173413">Pixabay</a>*/
 
     /* --- CONFIGURATION DU FOND --- */
     background-size: cover;        /* L'image prend tout l'espace disponible sans se déformer */
