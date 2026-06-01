@@ -1,9 +1,22 @@
 
-.Hero{
-    min-height:90vh;
+.Hero {
+    min-height: 90vh;
     display: grid;
     grid-auto-flow: row;
     align-content: center;
+    box-sizing: border-box;
+
+    /* --- COUCHE SUPÉRIEURE : Filtre blanc semi-transparent (Opacité 80%) --- */
+    /* --- COUCHE INFÉRIEURE : Votre image de fond --- */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), 
+        url('../../ressources/images/door.jpg');
+
+    /* --- CONFIGURATION DU FOND --- */
+    background-size: cover;        /* L'image prend tout l'espace disponible sans se déformer */
+    background-position: center;  /* L'image reste parfaitement centrée */
+    background-repeat: no-repeat;  /* Empêche l'image de se répéter */
+    background-attachment: scroll; /* Standard pour mobile (évite les bugs du fixed) */
 }
 
 

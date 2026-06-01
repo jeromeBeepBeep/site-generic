@@ -1,11 +1,11 @@
 :root {
   /* Thème par défaut*/
-  --color-light:#efefef;
-  --color-mid-light:#b2b2b2;
-  --color-medium:#8d8c8c;
-  --color-mid-dark:#686868;
-  --color-dark:#383838;
-  --color-complementary:#d0d3e1;
+  --color-light:#f9edcc;
+  --color-mid-light:#f9df74;
+  --color-medium:#edae49;
+  --color-mid-dark:#ea2b1f;
+  --color-dark:#611210;
+  --color-complementary:#f6e5e6;
   --font-title:Roboto; /*load in head of file*/
   --font-body:Nunito; /*load in head of file*/
 
@@ -81,7 +81,7 @@ html, body {
 .elastic-separator {
     width: 0%; /* Commence invisible (largeur à 0) */
     height: 5px; /* Épaisseur fine de la pilule */
-    background: linear-gradient(90deg, var(--color-dark), var(--color-mid-dark)); /* Dégradé moderne, change les couleurs ici */
+    background: linear-gradient(90deg, var(--color-complementary), var(--color-mid-light)); /* Dégradé moderne, change les couleurs ici */
     border-radius: 9999px; /* Donne la forme de pilule parfaite */
     opacity: 0;
     

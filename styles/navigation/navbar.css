@@ -63,7 +63,7 @@
 .nav-link-active,.nav-link{
     font-size: 16px;
     color: var(--color-dark);
-    background-color: #ddd;
+    background-color:white;
     border: none;
     padding: 6px 5px;
     text-align: center;
