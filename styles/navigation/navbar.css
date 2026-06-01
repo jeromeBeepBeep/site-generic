@@ -79,6 +79,7 @@
     color: var(--color-light);
     background-color: var(--color-dark);
     font-weight: bold;
+    white-space: nowrap
 }
 
 .nav-btn-cont {
