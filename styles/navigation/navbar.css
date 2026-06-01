@@ -52,7 +52,7 @@
 .nav-link-cont {
   display: flex;
   flex-direction: row;
-  column-gap: 2%;
+  column-gap: 20px;
   align-items: center; 
   height: 100%;  
 }
@@ -63,7 +63,7 @@
     color: var(--color-dark);
     background-color: #ddd;
     border: none;
-    padding: 6px 0px;
+    padding: 6px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -72,6 +72,7 @@
     border-radius: 250px;
     min-width: 100px;
     font-weight: normal;
+    white-space: nowrap;
 }
 
 .nav-link-active{
@@ -79,7 +80,6 @@
     color: var(--color-light);
     background-color: var(--color-dark);
     font-weight: bold;
-    white-space: nowrap
 }
 
 .nav-btn-cont {
