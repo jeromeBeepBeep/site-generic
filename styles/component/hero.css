@@ -1,10 +1,15 @@
 
+.Hero{
+  min-height:90vh;
+}
+
+
 .Hero .Hero_component{
-    text-align: center;
-    font-size: 5vh;
-    margin-left: 10%;
-    margin-right: 10%;
-     word-break: normal;
+  text-align: center;
+  font-size: 5vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  word-break: normal;
 }
 
 #Hero-title{
