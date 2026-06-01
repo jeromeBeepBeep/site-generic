@@ -19,10 +19,32 @@ html, body {
 
 .page-content{
   max-width: 100%;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
+.text-defaut h1{
+  padding-left: 10px;
+  border-radius: 150px;
+  top:56px;
+  font-weight: normal;
+  font-family: var(--font-title);
+  font-size: medium;
+  position:sticky;
+  background-color: var(--color-light);
+}
+.text-defaut ul{
+    font-family: var(--font-body);
+
+}
+.text-defaut li{
+    font-family: var(--font-body);
+    margin-bottom: 15px;
+}
+
+.text-defaut p{
+    font-family: var(--font-body);
+}
 
 
 /* Conteneur pour centrer et espacer le séparateur */

@@ -14,6 +14,7 @@
     width: 100%;
     background-color: var(--color-light);
     justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 #navbar_Title,#navbar_subTitle,.nav-link,.nav-link-active{
@@ -34,7 +35,7 @@
 }
 
 #navbar_Title{
-    font-size: 16px;
+    font-size: medium;
     font-weight:bolder;
     color: var(--color-dark);
     font-family: var(--font-title);
