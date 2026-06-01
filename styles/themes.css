@@ -11,6 +11,9 @@
 
 }
 
+.empty-footer{
+  height:50vh;
+}
 
 html, body {
   margin: 0;
