@@ -12,11 +12,13 @@
     align-self: flex-start;
     height : 56px;
     width: 100%;
+    max-width: 100vw;
     background-color: var(--color-light);
     justify-content: space-between;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-bottom: 0.5px solid var(--color-mid-light);
+    overflow-x: hidden;
 }
 
 #navbar_Title,#navbar_subTitle,.nav-link,.nav-link-active{
