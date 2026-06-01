@@ -4,6 +4,7 @@
     font-size: 5vh;
     margin-left: 10%;
     margin-right: 10%;
+     word-break: normal;
 }
 
 #Hero-title{
@@ -16,16 +17,47 @@
 }
 
 
-/*for typecriter animation*/
-.typewriter > * {
-  color: transparent;
-  position: relative;
+.animate-reveal {
+  opacity: 0; /* Invisible */
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.typewriter > *::after {
-  content: attr(data-content);
-  color: var(--font-color, black);
-  position: absolute;
-  left: 0;
-  top: 0;
+/* 2. La classe qui déclenche l'animation (sera ajoutée via JS ou direct en CSS) */
+/* Pour un test immédiat sans JS, vous pouvez utiliser : .Hero:hover .animate-reveal */
+.animate-reveal.is-visible {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Reprend sa position normale */
 }
+
+/* 3. Les délais pour un effet "cascade" (le paragraphe après le titre) */
+.delay-1 {
+    transition-delay: 0.3s; /* Attend 0.3s avant de commencer */
+}
+
+/* Définition de l'animation */
+@keyframes revealFadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-reveal {
+    /* Sécurité pour le texte */
+    white-space: normal;
+    
+    /* Application de l'animation au chargement */
+    opacity: 0; /* État initial caché avant le début */
+    animation: revealFadeSlide 1s ease-out forwards;
+}
+
+/* Délais en cascade */
+.delay-1 {
+    animation-delay: 1s;
+}
+
