@@ -24,7 +24,7 @@ html, body {
 
 }
 
-.text-defaut h1, .text-defaut h2{
+.text-defaut h1, .text-defaut h2, .text-defaut h3{
   top:56px;
   padding-left: 10px;
   border-radius: 150px;
@@ -39,8 +39,14 @@ html, body {
 
 .text-defaut h2{
   background-color: white;
+  position:unset;
 }
 
+.text-defaut h3{
+  background-color:unset;
+  position:unset;
+  border-style: none;
+}
 
 
 .text-defaut ul{
