@@ -21,12 +21,13 @@ html, body {
   max-width: 100%;
   padding-left: 4%;
   padding-right: 4%;
+
 }
 
-.text-defaut h1{
+.text-defaut h1, .text-defaut h2{
+  top:56px;
   padding-left: 10px;
   border-radius: 150px;
-  top:56px;
   font-weight: normal;
   font-family: var(--font-title);
   font-size: medium;
@@ -35,6 +36,13 @@ html, body {
   border: 1px solid var(--color-mid-light);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
+
+.text-defaut h2{
+  background-color: white;
+}
+
+
+
 .text-defaut ul{
     font-family: var(--font-body);
 

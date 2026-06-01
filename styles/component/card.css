@@ -1,0 +1,59 @@
+/* --- Conteneur global des cartes --- */
+.card-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive automatique */
+    gap: 2rem;
+    padding: 2rem 4%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Style de la Carte --- */
+.card {
+    background-color: white;
+    border: 1px solid var(--color-mid-light, #e0e0e0);
+    border-radius: 16px; /* Bords arrondis modernes */
+    overflow: hidden; /* Pour que le header épouse l'arrondi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Ombre très douce */
+    display: flex;
+    flex-direction: column; /* Aligne header, body, et footer verticalement */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Effet au survol (Hover) */
+.card:hover {
+    transform: translateY(-6px); /* Soulève légèrement la carte */
+    border-color: var(--color-medium, #cccccc);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* L'ombre s'accentue */
+}
+
+/* --- Le Header (Titre) --- */
+.card-header {
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    font-family: var(--font-title), sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-dark, #222222);
+}
+
+/* --- Le Body (Texte principal) --- */
+.card-body {
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-mid-dark, #555555);
+    flex-grow: 1; /* Force le body à prendre tout l'espace pour aligner les footers */
+}
+
+/* --- Le Footer (Conclusion/Badge) --- */
+.card-footer {
+    padding: 1.2rem 1.5rem;
+    background-color: var(--color-light, #f9f9f9); /* Fond légèrement grisé */
+    border-top: 1px solid var(--color-mid-light, #eeeeee);
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-medium-dark, #666666);
+    font-style: italic; /* Donne un côté citation / conclusion subtil */
+}
