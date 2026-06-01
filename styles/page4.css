@@ -1,0 +1,163 @@
+/* --- Titres et En-tête de la page --- */
+.contact-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-subtitle {
+    font-family: var(--font-body), sans-serif;
+    color: var(--color-mid-dark);
+    max-width: 600px;
+    margin: 1rem auto 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.section-title-tarifs {
+    text-align: center;
+    font-family: var(--font-title), sans-serif;
+    color: var(--color-dark);
+    margin: 4rem 0 2rem 0;
+    font-size: 1.75rem;
+}
+
+/* --- Grille Contact & Lieu (2 colonnes) --- */
+.contact-grid, .prices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- Adaptations spécifiques des cartes --- */
+.contact-lead {
+    font-weight: 500;
+    color: var(--color-medium-dark);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Style des liens interactifs de contact */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-dark);
+    font-family: var(--font-body), sans-serif;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+    width: max-content;
+    max-width: 100%;
+}
+
+.contact-item:hover {
+    color: var(--color-medium);
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+}
+
+/* --- Section Zone Géographique --- */
+.location-badge {
+    display: inline-block;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-family: var(--font-title), sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-mid-light);
+}
+
+.location-details {
+    padding-left: 1.2rem;
+    margin: 0;
+    font-family: var(--font-body), sans-serif;
+    color: var(--color-mid-dark);
+    line-height: 1.6;
+}
+
+.location-details li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Section Tarifs --- */
+.price-value {
+    font-family: var(--font-title), sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.price-value span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--color-mid-dark);
+}
+
+/* Carte mise en avant (Entretien gratuit) */
+.card.highlight-card {
+    border-color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+/* --- Encadré Financements --- */
+.funding-notice {
+    max-width: 1000px;
+    margin: 3rem auto 0 auto;
+    background-color: white;
+    border-left: 4px solid var(--color-dark); /* Ligne d'accentuation sur le côté */
+    padding: 1.5rem;
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.funding-notice p {
+    margin: 0;
+    font-family: var(--font-body), sans-serif;
+    color: var(--color-mid-dark);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.notice-icon {
+    font-size: 1.3rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE (Sous 800px)
+   ========================================================================== */
+@media (max-width: 800px) {
+    .contact-grid, .prices-grid {
+        grid-template-columns: 1fr; /* Passage strict sur une colonne mobile */
+        gap: 1.5rem;
+    }
+    
+    .mail-text {
+        font-size: 0.9rem; /* Réduit un tout petit peu l'adresse mail pour éviter le nowrap qui casse la carte mobile */
+        white-space: nowrap;
+    }
+
+    .funding-notice {
+        margin-top: 2rem;
+        padding: 1.2rem;
+    }
+}
