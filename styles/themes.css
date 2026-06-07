@@ -43,6 +43,8 @@ html, body {
 .text-defaut h1, .text-defaut h2, .text-defaut h3{
   padding-left: 10px;
   border-radius: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-weight: normal;
   font-family: var(--font-title);
   font-size: medium;
@@ -50,8 +52,6 @@ html, body {
   background-color: var(--color-light);
   border: 1px solid var(--color-mid-light);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-
-
 }
 
 

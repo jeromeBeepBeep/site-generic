@@ -158,6 +158,12 @@
         margin-bottom: 1rem;
     }
 
+    .wrapper-timeline-title {
+        z-index: 1;
+        position: sticky;
+        top:56px;
+    }
+
     #timeline-title, .outer h1{
         font-size: medium;  
         top:2px;
