@@ -42,7 +42,7 @@
     font-family: var(--font-body), sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--color-mid-dark, #555555);
+    color: var(--color-dark, #555555);
     flex-grow: 1; /* Force le body à prendre tout l'espace pour aligner les footers */
 }
 
