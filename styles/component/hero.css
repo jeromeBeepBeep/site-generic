@@ -9,14 +9,14 @@
     /* --- COUCHE SUPÉRIEURE : Filtre blanc semi-transparent (Opacité 80%) --- */
     /* --- COUCHE INFÉRIEURE : Votre image de fond --- */
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), 
-        url('../../ressources/images/door.jpg');/*Image by <a href="https://pixabay.com/users/cdd20-1193381/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5173413">Hello Cdd20</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5173413">Pixabay</a>*/
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7)), 
+        url('../../ressources/images/door_orange.jpg');/*Image by <a href="https://pixabay.com/users/cdd20-1193381/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5173413">Hello Cdd20</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5173413">Pixabay</a>*/
 
     /* --- CONFIGURATION DU FOND --- */
-    background-size: cover;        /* L'image prend tout l'espace disponible sans se déformer */
-    background-position: center;  /* L'image reste parfaitement centrée */
-    background-repeat: no-repeat;  /* Empêche l'image de se répéter */
-    background-attachment: scroll; /* Standard pour mobile (évite les bugs du fixed) */
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat;  
+    background-attachment: scroll;
 }
 
 
@@ -87,4 +87,9 @@
 .delay-1 {
     animation-delay: 1s;
 }
-
+.delay-2 {
+    animation-delay: 2s;
+}
+.delay-3 {
+    animation-delay: 4s;
+}
