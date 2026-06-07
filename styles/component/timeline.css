@@ -9,10 +9,28 @@
     font-family: system-ui, -apple-system, sans-serif;
 }
 
+.wrapper-timeline-title {
+  z-index: 1;
+  display: inline-block;
+  /* Votre couleur orange */
+  width:100%;
+  background-color: #ffffff;
+ 
+}
+
+.outer .wrapper-timeline-title {
+    top:56px;
+    position:sticky;
+    z-index: 9;
+}
+
+
+
+
 /* Bloc Titre + Photo */
 .timeline-img-cont {
     flex: 1;
-    position: sticky; /* Reste visible pendant le scroll des cartes */
+    position: sticky;
     top: 56px;
     text-align: center;
     height: max-content;
@@ -134,15 +152,15 @@
         padding: 2rem 1rem;
     }
 
+
     .timeline-img-cont {
-        position: static; /* Désactive le sticky sur mobile */
+        position: static;
         margin-bottom: 1rem;
     }
 
     #timeline-title, .outer h1{
         font-size: medium;  
-        position: sticky;
-        top:56px;
+        top:2px;
         z-index: 10;
     }
 
