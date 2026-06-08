@@ -108,6 +108,11 @@
     .nav-btn-cont {
     visibility:visible;
     }
+
+    .responsiveNavbar{
+    height:56px;
+    overflow-y: hidden;
+}
 }
 
 @media (min-width: 800px) {
