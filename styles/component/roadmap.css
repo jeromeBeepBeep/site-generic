@@ -1,7 +1,10 @@
 .roadmap {
   position: relative;
   padding-bottom: 50px;
+  font-family: var(--font-title);
 }
+
+
 
 /* --- Titre Sticky --- */
 .roadmap-title {
@@ -19,11 +22,41 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Effet d'ombre discret au défilement */
 }
 
+
+
+.roadmap-text h1{
+  padding-left: 10px;
+  border-radius: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: normal;
+  font-family: var(--font-title);
+  font-size: medium;
+  position:sticky;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-mid-light);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.roadmap-text .wrapper-titre{
+    position: sticky;
+  /*top: 56px;*/
+  top: var(--nav-height, 56px);
+  z-index: 1;
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width:100%;
+  background-color: #ffffff;
+}
+
 /* --- Conteneur de la Roadmap --- */
 .roadmap-container {
     position: relative;
     max-width: 100%;
     margin: 10vh auto 0 auto;
+    z-index: 0;
 }
 
 /* La ligne centrale en pointillés */
@@ -69,6 +102,7 @@
   margin-top: 0;
   color: var(--color-dark);
   font-family: var(--font-title);
+
 }
 
 .content p {
