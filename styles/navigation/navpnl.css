@@ -4,7 +4,7 @@
 .nav-panel {
   display: flex;
   justify-content: flex-end;
-  top:56px;
+  top: var(--nav-height, 56px);
   position: fixed;
   z-index: 9999;
   width:100%;

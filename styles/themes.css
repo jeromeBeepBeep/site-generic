@@ -29,10 +29,10 @@ html, body {
 
 .text-defaut .wrapper-titre {
   position: sticky;
-  top: 56px;
+  /*top: 56px;*/
+  top: var(--nav-height, 56px);
   z-index: 1;
   display: inline-block;
-  /* Votre couleur orange */
   padding-top: 2px;
   padding-bottom: 2px;
   width:100%;

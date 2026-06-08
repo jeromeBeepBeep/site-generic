@@ -1,6 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
     // On cible TOUS les séparateurs au cas où tu en aurais plusieurs sur la page
     const elasticSeparators = document.querySelectorAll('.elastic-separator');
+    const navbar = document.querySelector('.responsiveNavbar');
+
+    const resizeObserver = new ResizeObserver(entries => {
+        for (let entry of entries) {
+        // Récupère la hauteur réelle et exacte de la navbar
+            const navHeight = entry.borderBoxSize[0].blockSize;
+    
+            // Transmet cette valeur au CSS
+            document.documentElement.style.setProperty('--nav-height', `${navHeight}px`);
+        }
+    });
+
+    // Lance l'observation
+    if (navbar) {
+    resizeObserver.observe(navbar);
+    }
+
     
     if (elasticSeparators.length === 0) return;
 

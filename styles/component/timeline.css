@@ -19,7 +19,7 @@
 }
 
 .outer .wrapper-timeline-title {
-    top:56px;
+    top: var(--nav-height, 56px);
     position:sticky;
     z-index: 9;
 }
@@ -31,7 +31,7 @@
 .timeline-img-cont {
     flex: 1;
     position: sticky;
-    top: 56px;
+    top: var(--nav-height, 56px);
     text-align: center;
     height: max-content;
     .p{
@@ -161,7 +161,7 @@
     .wrapper-timeline-title {
         z-index: 1;
         position: sticky;
-        top:56px;
+        top: var(--nav-height, 56px);
     }
 
     #timeline-title, .outer h1{
