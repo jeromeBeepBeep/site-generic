@@ -113,6 +113,7 @@
 .card.highlight-card {
     border-color: var(--color-dark);
     background-color: var(--color-light);
+    padding: 10px;
 }
 
 /* --- Encadré Financements --- */
