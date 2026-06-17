@@ -80,6 +80,63 @@ html, body {
     font-family: var(--font-body);
 }
 
+.defaut-text-pic {
+  display: flex;
+  align-items: stretch; /* Force l'alignement vertical strict */
+  gap: 20px;
+}
+
+.text-part {
+  flex: 1;
+}
+
+.pic-part {
+  width: auto;
+  max-width: 40%;
+  max-height: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+}
+
+/* --- S'applique uniquement sur les écrans de moins de 800px --- */
+@media (max-width: 800px) {
+  
+  .defaut-text-pic {
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne */
+    align-items: stretch;
+    gap: 0; /* On enlève l'espace pour que l'image et le texte se superposent bien */
+  }
+
+  /* On force le texte et l'image à aller dans la même cellule de la grille (ligne 1, colonne 1) */
+  .text-part, .pic-part {
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+
+  .text-part {
+    z-index: 2; /* Force le texte à passer DEVANT */
+    
+    /* Fond blanc transparent (le 0.85 correspond à 85% d'opacité, ajustable) */
+    background-color: rgba(255, 255, 255, 0.85); 
+    
+    /* Optionnel : Ajoute un peu de confort visuel pour décoller le texte des bords de l'image */
+    padding: 20px; 
+  }
+
+  .pic-part {
+    z-index: 1; /* L'image reste DERRIÈRE */
+    
+    /* On change les règles de taille pour que l'image s'adapte à toute la zone du texte */
+    max-width: 100%; 
+    width: 100%;
+    height: 100%;
+    
+    /* Cover est indispensable ici pour que l'image remplisse tout l'arrière-plan du texte */
+    object-fit: cover; 
+  }
+}
+
+
 
 /* Conteneur pour centrer et espacer le séparateur */
 .separator-container {
