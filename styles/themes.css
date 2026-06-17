@@ -31,7 +31,7 @@ html, body {
   position: sticky;
   /*top: 56px;*/
   top: var(--nav-height, 56px);
-  z-index: 1;
+  z-index: 3;
   display: inline-block;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -81,6 +81,7 @@ html, body {
 }
 
 .defaut-text-pic {
+
   display: flex;
   align-items: stretch; /* Force l'alignement vertical strict */
   gap: 20px;
@@ -106,6 +107,7 @@ html, body {
     grid-template-columns: 1fr; /* Une seule colonne */
     align-items: stretch;
     gap: 0; /* On enlève l'espace pour que l'image et le texte se superposent bien */
+    padding:5px;
   }
 
   /* On force le texte et l'image à aller dans la même cellule de la grille (ligne 1, colonne 1) */

@@ -57,6 +57,7 @@
     max-width: 100%;
     margin: 10vh auto 0 auto;
     z-index: 0;
+    padding:5px;
 }
 
 /* La ligne centrale en pointillés */
