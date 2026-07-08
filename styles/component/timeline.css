@@ -43,7 +43,7 @@
     };
 }
 
-#timeline-title, .outer h1 {
+#timeline-title, .outer h2 {
   border-radius: 150px;
   font-weight: normal;
   font-family: var(--font-title);
@@ -165,7 +165,7 @@
         top: var(--nav-height, 56px);
     }
 
-    #timeline-title, .outer h1{
+    #timeline-title, .outer h2{
         font-size: medium;  
         top:2px;
         z-index: 10;

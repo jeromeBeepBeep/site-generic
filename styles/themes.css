@@ -55,12 +55,12 @@ html, body {
 }
 
 
-.text-defaut h2{
+.text-defaut h3{
   background-color: white;
   position:unset;
 }
 
-.text-defaut h3{
+.text-defaut h4{
   background-color:unset;
   position:unset;
   border-style: none;

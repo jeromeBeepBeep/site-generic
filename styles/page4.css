@@ -72,7 +72,7 @@
 /* --- Section Zone Géographique --- */
 .location-badge {
     display: inline-block;
-    background-color: var(--color-light);
+    background-color: var(white);
     color: var(--color-dark);
     padding: 8px 16px;
     border-radius: 50px;
@@ -118,6 +118,7 @@
 
 /* --- Encadré Financements --- */
 .funding-notice {
+    margin:20px;
     max-width: 1000px;
     margin: 3rem auto 0 auto;
     background-color: white;
@@ -158,6 +159,7 @@
     }
 
     .funding-notice {
+        margin:20px;
         margin-top: 2rem;
         padding: 1.2rem;
     }

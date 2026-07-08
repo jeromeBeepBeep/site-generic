@@ -24,7 +24,7 @@
 
 
 
-.roadmap-text h1{
+.roadmap-text h2{
   padding-left: 10px;
   border-radius: 150px;
   padding-top: 5px;
@@ -152,6 +152,6 @@
 
   /* Repositionnement des puces sur la ligne de gauche */
   .step-right::after, .step-left::after {
-    left: calc(5vw - 14px);
+    left: calc(5vw - 19px);
   }
 }
